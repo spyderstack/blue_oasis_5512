@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  --color-bg:        #1a1e1f;
+  --color-surface:   #212426;
+  --color-border:    #2e3234;
+  --color-teal:      #4eb3c8;
+  --color-teal-dim:  #3a8fa1;
+  --color-gold:      #d4a853;
+  --color-text:      #e8e8e6;
+  --color-muted:     #888c90;
+  --color-dark-text: #212123;
+
+  --font-body:    'Epilogue', sans-serif;
+  --font-display: 'Instrument Serif', serif;
+}
+
+/* ─── Base Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  min-width: 350px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--color-teal);
+  color: var(--color-bg);
+}
+
+/* ─── Typography ────────────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
+
+/* ─── Hero Slideshow ────────────────────────────────────────────── */
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  transform: scale(1.05);
+  animation: hero-ken-burns 8s ease-in-out infinite alternate;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+@keyframes hero-ken-burns {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1.0); }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(26, 30, 31, 0.92) 0%,
+    rgba(26, 30, 31, 0.5) 40%,
+    rgba(26, 30, 31, 0.1) 70%,
+    transparent 100%
+  );
+  z-index: 2;
+}
+
+/* ─── Scroll-Reveal Animations ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.delay-1 { transition-delay: 0.15s; }
+.reveal.delay-2 { transition-delay: 0.30s; }
+.reveal.delay-3 { transition-delay: 0.45s; }
+.reveal.delay-4 { transition-delay: 0.60s; }
+.reveal.delay-5 { transition-delay: 0.75s; }
+.reveal.delay-6 { transition-delay: 0.90s; }
+
+/* ─── Nav ───────────────────────────────────────────────────────── */
+.nav-transparent { background-color: transparent; }
+.nav-solid       { background-color: var(--color-surface); }
+.nav-transition  { transition: background-color 0.4s ease, border-color 0.4s ease; }
+
+/* ─── Gallery ───────────────────────────────────────────────────── */
+.gallery-item {
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+/* ─── Lightbox ──────────────────────────────────────────────────── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Scroll Indicator ──────────────────────────────────────────── */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%       { transform: translateY(8px); opacity: 1; }
+}
+
+.scroll-indicator {
+  animation: bounce-down 2s infinite ease-in-out;
+}
+
+/* ─── Divider line ──────────────────────────────────────────────── */
+.teal-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--color-teal);
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Amenity card hover ────────────────────────────────────────── */
+.amenity-card {
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.amenity-card:hover {
+  border-color: var(--color-teal-dim);
+  background-color: rgba(78, 179, 200, 0.05);
+}
+
+/* ─── Stat bar ──────────────────────────────────────────────────── */
+.stat-item {
+  border-right: 1px solid var(--color-border);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+/* ─── CTA Pulse button ──────────────────────────────────────────── */
+.btn-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-cta:hover::after { opacity: 1; }
+
+/* ─── Section spacing ───────────────────────────────────────────── */
+.section-pad { padding: 6rem 0; }
+
+@media (max-width: 768px) {
+  .section-pad { padding: 4rem 0; }
+}
