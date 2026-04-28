@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+:root {
+  --cedar-dark: #212123;
+  --cedar-gray: #A0A1A5;
+  --cedar-light-gray: #606065;
+  --cedar-white: #FFFFFF;
+  --cedar-off-white: #F5F5F3;
+}
+
+@theme inline {
+  --color-cedar-dark: var(--cedar-dark);
+  --color-cedar-gray: var(--cedar-gray);
+  --color-cedar-light-gray: var(--cedar-light-gray);
+  --color-cedar-white: var(--cedar-white);
+  --color-cedar-off-white: var(--cedar-off-white);
+  --font-epilogue: "Epilogue", sans-serif;
+
+  --animate-fade-in: fade-in 0.8s ease-out both;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out both;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out both;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out both;
+  --animate-zoom-in: zoom-in 8s ease-out both;
+  --animate-bounce-subtle: bounce-subtle 2s ease-in-out infinite;
+  --animate-crossfade-in: crossfade-in 1.2s ease-in-out both;
+  --animate-crossfade-out: crossfade-out 1.2s ease-in-out both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes crossfade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes crossfade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* ========== Global Styles ========== */
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+body {
+  background: var(--cedar-white);
+  color: var(--cedar-dark);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 300;
+  min-width: 350px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--cedar-dark);
+  color: var(--cedar-gray);
+}
+
+/* ========== Scroll Reveal (matching original load-in system) ========== */
+
+.load-in.above .has-load-in {
+  position: relative;
+  top: 30px;
+  opacity: 0;
+}
+
+.load-in .has-load-in {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.75s, top 0.75s;
+}
+
+/* Stagger delays matching original: 0.25s increments */
+.load-in .has-load-in.delay1, .load-in .has-load-in.delay1 * { transition-delay: 0.25s; }
+.load-in .has-load-in.delay2, .load-in .has-load-in.delay2 * { transition-delay: 0.5s; }
+.load-in .has-load-in.delay3, .load-in .has-load-in.delay3 * { transition-delay: 0.75s; }
+.load-in .has-load-in.delay4, .load-in .has-load-in.delay4 * { transition-delay: 1s; }
+.load-in .has-load-in.delay5, .load-in .has-load-in.delay5 * { transition-delay: 1.25s; }
+.load-in .has-load-in.delay6, .load-in .has-load-in.delay6 * { transition-delay: 1.5s; }
+
+/* Legacy reveal classes (kept for backward compatibility) */
+.reveal {
+  position: relative;
+  top: 30px;
+  opacity: 0;
+  transition: opacity 0.75s, top 0.75s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  top: 0;
+}
+
+.reveal-delay-1 { transition-delay: 0.25s; }
+.reveal-delay-2 { transition-delay: 0.5s; }
+.reveal-delay-3 { transition-delay: 0.75s; }
+.reveal-delay-4 { transition-delay: 1s; }
+.reveal-delay-5 { transition-delay: 1.25s; }
+
+/* ========== Scrollbar ========== */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* ========== Button Styles ========== */
+
+.btn-cedar {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border: 1px solid var(--cedar-gray);
+  background: transparent;
+  color: var(--cedar-dark);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn-cedar:hover {
+  background: var(--cedar-dark);
+  color: var(--cedar-white);
+  border-color: var(--cedar-dark);
+}
+
+.btn-cedar-light {
+  border-color: rgba(255,255,255,0.4);
+  color: var(--cedar-white);
+}
+
+.btn-cedar-light:hover {
+  background: var(--cedar-white);
+  color: var(--cedar-dark);
+  border-color: var(--cedar-white);
+}
+
+/* ========== Hamburger ========== */
+
+.hamburger-line {
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: var(--cedar-white);
+  transition: all 0.4s ease;
+}
+
+.hamburger-dark .hamburger-line {
+  background: var(--cedar-dark);
+}
+
+/* ========== Image Zoom on Scroll ========== */
+
+.zoom-animate {
+  overflow: hidden;
+}
+
+.image-grow img {
+  width: calc(100% + 20vw);
+  max-width: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-grow img {
+    width: calc(100% + 141px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .image-grow img {
+    width: 100%;
+  }
+}
+
+/* ========== Hero Slide ========== */
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  animation: zoom-in 8s ease-out both;
+}
