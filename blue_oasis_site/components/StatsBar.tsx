@@ -5,16 +5,16 @@ const items = [
   { label: "location", value: "Bradenton, FL" },
   { label: "pool", value: "private" },
   { label: "check-in", value: "4:00 PM" },
-  { label: "check-out", value: "11:00 AM" },
-  { label: "min. stay", value: "3 nights" },
+  { label: "check-out", value: "10:00 AM" },
+  { label: "min. stay", value: "2 nights" },
   { label: "bedrooms", value: "3 BR" },
   { label: "bathrooms", value: "2 BA" },
   { label: "guests", value: "up to 8" },
   { label: "location", value: "Bradenton, FL" },
   { label: "pool", value: "private" },
   { label: "check-in", value: "4:00 PM" },
-  { label: "check-out", value: "11:00 AM" },
-  { label: "min. stay", value: "3 nights" },
+  { label: "check-out", value: "10:00 AM" },
+  { label: "min. stay", value: "2 nights" },
 ];
 
 export default function StatsBar() {

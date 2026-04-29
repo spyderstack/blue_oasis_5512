@@ -24,8 +24,8 @@ export default function Location() {
 
             <RevealWrapper delay={100}>
               <p className="text-[#a0a1a5] font-light text-base md:text-lg leading-relaxed mb-8">
-                Nestled in Bradenton Florida, Blue Oasis 5512 puts you steps from the
-                ocean, world-class dining, nightlife, and cultural attractions -
+                Nestled in Bradenton Florida, Blue Oasis 5512 puts you just a short drive from the
+                ocean, local dining, the Riverwalk, and cultural attractions -
                 while remaining your serene private retreat.
               </p>
             </RevealWrapper>
@@ -34,11 +34,11 @@ export default function Location() {
             <RevealWrapper delay={180}>
               <div className="space-y-0 border border-white/[0.06] mb-10">
                 {[
-                  { place: "Bradenton Beach", distance: "0.5 mi to the ocean" },
-                  { place: "Cooper Beach", distance: "1.2 mi" },
-                  { place: "Bradenton Town", distance: "0.8 mi" },
-                  { place: "Bradenton Airport", distance: "12 mi" },
-                  { place: "Wynwood Arts", distance: "5 mi" },
+                  { place: "Gulf Beaches", distance: "9 min drive" },
+                  { place: "Riverwalk", distance: "Short drive" },
+                  { place: "Downtown Bradenton", distance: "Nearby" },
+                  { place: "Bishop Museum", distance: "Nearby" },
+                  { place: "Sarasota", distance: "Quick access" },
                 ].map((item, i, arr) => (
                   <div
                     key={item.place}

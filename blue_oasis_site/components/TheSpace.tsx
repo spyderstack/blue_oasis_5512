@@ -28,7 +28,7 @@ export default function TheSpace() {
             <RevealWrapper delay={150}>
               <p className="text-[#a0a1a5] font-light text-base md:text-lg leading-relaxed mb-6">
                 Blue Oasis 5512 is a meticulously curated luxury vacation home
-                in the heart of Miami Beach. Designed for those who refuse to
+                in the Bayshore Gardens area of Bradenton. Designed for those who refuse to
                 settle, every room balances elevated aesthetics with the warmth
                 of a true home.
               </p>
@@ -36,7 +36,7 @@ export default function TheSpace() {
 
             <RevealWrapper delay={250}>
               <p className="text-[#a0a1a5] font-light text-base md:text-lg leading-relaxed mb-10">
-                With 3 bedrooms, 2 a private pool, and resort-style amenities,
+                With 3 bedrooms, 2 baths, a private pool, and resort-style amenities,
                 Blue Oasis offers an escape from the ordinary — without leaving
                 the city behind.
               </p>
@@ -46,8 +46,8 @@ export default function TheSpace() {
             <RevealWrapper delay={350}>
               <div className="grid grid-cols-3 gap-0 border border-white/[0.06] mb-10">
                 {[
-                  { label: "bedrooms", value: "4" },
-                  { label: "bathrooms", value: "3" },
+                  { label: "bedrooms", value: "3" },
+                  { label: "bathrooms", value: "2" },
                   { label: "max guests", value: "8" },
                 ].map((stat, i) => (
                   <div

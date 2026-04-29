@@ -79,7 +79,7 @@ export default function Footer() {
 
             <div className="mt-8 border border-white/[0.06] p-5">
               <p className="label text-[#606065] mb-1">minimum stay</p>
-              <p className="text-[#f2f2f0] text-sm font-light">3 nights</p>
+              <p className="text-[#f2f2f0] text-sm font-light">2 nights</p>
               <p className="label text-[#606065] mt-3 mb-1">instant booking</p>
               <p className="text-[#f2f2f0] text-sm font-light">
                 Contact us for availability
@@ -93,7 +93,7 @@ export default function Footer() {
           <p className="label text-[#606065]">
             © {year} Blue Oasis 5512. All rights reserved.
           </p>
-          <p className="label text-[#606065]">Miami Beach, FL</p>
+          <p className="label text-[#606065]">Bradenton, FL</p>
         </div>
       </div>
     </footer>

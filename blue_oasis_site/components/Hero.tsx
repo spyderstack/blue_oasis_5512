@@ -64,7 +64,7 @@ export default function Hero() {
             <span className="font-extralight opacity-70">oasis awaits</span>
           </h1>
           <p className="text-[#a0a1a5] text-base md:text-lg font-light max-w-md mb-10 leading-relaxed">
-            Welcome to <strong className="text-[#f2f2f0] font-light">Blue Oasis 5512</strong> — a luxury vacation rental
+            Welcome to <strong className="text-[#f2f2f0] font-light">Blue Oasis 5512</strong> - a luxury vacation rental
             where resort-style living meets intimate comfort. No crowds. Just
             you, and the life you deserve.
           </p>

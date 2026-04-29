@@ -16,20 +16,21 @@ import RevealWrapper from "./RevealWrapper";
 
 const amenities = [
   { icon: Waves, label: "Private Pool" },
-  { icon: Bed, label: "4 King Bedrooms" },
+  { icon: Bed, label: "3 Bedrooms" },
   { icon: ForkKnife, label: "Fully Equipped Kitchen" },
   { icon: WifiHigh, label: "High-Speed WiFi" },
   { icon: Car, label: "Private Parking" },
   { icon: Thermometer, label: "Central A/C & Heat" },
   { icon: Television, label: "Smart TVs in All Rooms" },
-  { icon: Coffee, label: "Nespresso Machine" },
+  { icon: Coffee, label: "Coffee Maker" },
 ];
 
 const rules = [
-  { icon: PawPrint, label: "No pets allowed" },
+  { icon: PawPrint, label: "Pet-friendly ($50 fee)" },
   { icon: Cigarette, label: "No smoking indoors" },
-  { icon: Shield, label: "No parties or events" },
+  { icon: Shield, label: "No parties or large gatherings" },
   { icon: FirstAid, label: "First Aid kit on site" },
+  { icon: Television, label: "Quiet hours: 10 PM–8 AM" },
 ];
 
 export default function Amenities() {
@@ -119,7 +120,7 @@ export default function Amenities() {
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
                   { label: "check-in", value: "4:00 PM" },
-                  { label: "check-out", value: "11:00 AM" },
+                  { label: "check-out", value: "10:00 AM" },
                 ].map((item) => (
                   <div
                     key={item.label}

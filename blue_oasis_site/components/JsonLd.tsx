@@ -56,7 +56,7 @@ export default function JsonLd() {
             value: 8,
             unitText: "guests",
           },
-          petsAllowed: false,
+          petsAllowed: true,
           amenityFeature: [
             { "@type": "LocationFeatureSpecification", name: "Private Pool", value: true },
             { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
@@ -69,7 +69,7 @@ export default function JsonLd() {
           ],
         },
         checkinTime: "16:00",
-        checkoutTime: "11:00",
+        checkoutTime: "10:00",
         priceRange: "$$$",
         aggregateRating: {
           "@type": "AggregateRating",
