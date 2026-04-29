@@ -1,4 +1,3 @@
-import { InstagramLogo, Envelope } from "@phosphor-icons/react/dist/ssr";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -6,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0e0e0f] border-t border-white/[0.06]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Brand */}
           <div>
             <p className="font-light tracking-[0.25em] uppercase text-sm text-[#f2f2f0] mb-2">
@@ -48,42 +47,6 @@ export default function Footer() {
                   {link.label}
                 </a>
               ))}
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <p className="label text-[#606065] mb-6">contact</p>
-            <div className="flex flex-col gap-4">
-              <a
-                href="mailto:hello@blueoasis5512.com"
-                className="flex items-center gap-3 text-[#a0a1a5] text-sm font-light hover:text-[#f2f2f0] transition-colors"
-              >
-                <Envelope size={16} weight="light" className="text-[#c8b89a]" />
-                hello@blueoasis5512.com
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#a0a1a5] text-sm font-light hover:text-[#f2f2f0] transition-colors"
-              >
-                <InstagramLogo
-                  size={16}
-                  weight="light"
-                  className="text-[#c8b89a]"
-                />
-                @blueoasis5512
-              </a>
-            </div>
-
-            <div className="mt-8 border border-white/[0.06] p-5">
-              <p className="label text-[#606065] mb-1">minimum stay</p>
-              <p className="text-[#f2f2f0] text-sm font-light">2 nights</p>
-              <p className="label text-[#606065] mt-3 mb-1">instant booking</p>
-              <p className="text-[#f2f2f0] text-sm font-light">
-                Contact us for availability
-              </p>
             </div>
           </div>
         </div>
