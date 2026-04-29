@@ -9,17 +9,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <p className="font-light tracking-[0.25em] uppercase text-sm text-[#f2f2f0] mb-4">
+            <p className="font-light tracking-[0.25em] uppercase text-sm text-[#f2f2f0] mb-2">
               Blue Oasis
               <span className="opacity-40 ml-1 tracking-normal font-normal">
                 5512
               </span>
             </p>
+            {/* Address — visible on-page local SEO signal */}
+            <address className="not-italic text-[#606065] text-xs font-light leading-relaxed mb-3">
+              5512 21st St Ct W<br />
+              Bradenton, FL 34207
+            </address>
             <p className="text-[#606065] text-sm font-light leading-relaxed max-w-xs">
-              A luxury vacation rental experience in the heart of Miami Beach.
+              A luxury vacation rental experience in Bradenton, FL.
               Book direct for the best rates and personal service.
             </p>
           </div>
+
 
           {/* Quick links */}
           <div>

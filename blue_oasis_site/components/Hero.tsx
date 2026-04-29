@@ -53,15 +53,20 @@ export default function Hero() {
           className={`transition-all duration-1000 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
-          <p className="font-light label text-[#a0a1a5] mb-4">Bradenton, FL</p>
+          <p className="font-light label text-[#a0a1a5] mb-4">
+            Bradenton, FL · 5512 21st St Ct W
+          </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-[#f2f2f0] leading-none mb-6">
+            {/* Visually decorative — SEO entity "Blue Oasis 5512" anchored here */}
+            <span className="sr-only">Blue Oasis 5512 — </span>
             your private
             <br />
             <span className="font-extralight opacity-70">oasis awaits</span>
           </h1>
           <p className="text-[#a0a1a5] text-base md:text-lg font-light max-w-md mb-10 leading-relaxed">
-            A luxury vacation rental where resort-style living meets intimate
-            comfort. No crowds. Just you, and the life you deserve.
+            Welcome to <strong className="text-[#f2f2f0] font-light">Blue Oasis 5512</strong> — a luxury vacation rental
+            where resort-style living meets intimate comfort. No crowds. Just
+            you, and the life you deserve.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
