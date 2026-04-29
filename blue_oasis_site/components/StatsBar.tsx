@@ -19,20 +19,17 @@ const items = [
 
 export default function StatsBar() {
   return (
-    <div className="w-full overflow-hidden border-y border-white/[0.06] bg-[#111112]">
-      <div className="ticker-track py-4">
+    <div className="w-full overflow-hidden bg-[#1AAEDB] border-y border-[#0F8FB8]">
+      <div className="ticker-track py-3.5">
         {items.map((item, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-6 px-8 shrink-0"
-          >
-            <div className="flex flex-col items-start">
-              <span className="label text-[#606065]">{item.label}</span>
-              <span className="text-[#f2f2f0] text-sm font-light tracking-wide mt-0.5">
+          <div key={i} className="flex items-center gap-5 px-6 shrink-0">
+            <div className="flex items-center gap-3">
+              <span className="label text-white/60 tracking-[0.15em]">{item.label}</span>
+              <span className="text-white text-sm font-semibold tracking-wide">
                 {item.value}
               </span>
             </div>
-            <div className="w-px h-6 bg-white/10" />
+            <div className="w-px h-4 bg-white/30" />
           </div>
         ))}
       </div>
