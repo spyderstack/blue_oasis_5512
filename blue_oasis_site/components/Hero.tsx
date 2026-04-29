@@ -54,6 +54,7 @@ export default function Hero() {
           className={`transition-all duration-1000 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
+
           {/* Location badge */}
           <div className="flex items-center gap-2 mb-5">
             <span className="accent-dot" />
