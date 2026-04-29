@@ -37,8 +37,8 @@ export default function Nav() {
   const navBg = atBottom
     ? "bg-white"
     : scrolled
-    ? "bg-[#111112]/95 backdrop-blur-md"
-    : "bg-transparent";
+      ? "bg-[#111112]/95 backdrop-blur-md"
+      : "bg-transparent";
 
   const textColor =
     atBottom ? "text-[#111112]" : "text-[#f2f2f0]";
@@ -46,15 +46,14 @@ export default function Nav() {
     scrolled && !atBottom
       ? "border-b border-white/5"
       : atBottom
-      ? "border-b border-black/10"
-      : "border-b border-transparent";
+        ? "border-b border-black/10"
+        : "border-b border-transparent";
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg} ${borderColor} ${
-          hidden && !mobileOpen ? "-translate-y-full" : "translate-y-0"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg} ${borderColor} ${hidden && !mobileOpen ? "-translate-y-full" : "translate-y-0"
+          }`}
         style={{ height: "var(--nav-height)" }}
       >
         <div className="max-w-[1400px] mx-auto px-6 h-full flex items-center justify-between">
@@ -70,12 +69,12 @@ export default function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="font-light text-sm md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`label hover:opacity-100 opacity-60 transition-opacity ${textColor}`}
+                className={`font-normal tracking-[0.25em] uppercase text-sm ${textColor} transition-colors hover:opacity-100 opacity-80`}
               >
                 {link.label}
               </a>
@@ -86,11 +85,10 @@ export default function Nav() {
           <div className="flex items-center gap-4">
             <a
               href="#book"
-              className={`hidden md:inline-flex btn-outline text-xs ${
-                atBottom
-                  ? "border-black/30 text-[#111112] hover:bg-black/5"
-                  : ""
-              }`}
+              className={`hidden md:inline-flex btn-outline text-xs ${atBottom
+                ? "border-black/30 text-[#111112] hover:bg-black/5"
+                : ""
+                }`}
             >
               Book Direct
               <ArrowRight size={14} weight="bold" />
