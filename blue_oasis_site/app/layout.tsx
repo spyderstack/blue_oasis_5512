@@ -89,7 +89,7 @@ export const metadata: Metadata = {
 
   // ── Verification (add tokens when you verify in Search Console) ───────────
   verification: {
-    google: "REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
+    google: "KSYM2twlQToT9Ibc3PDFFU5dDZZvTYsGsryuFW1Lxew",
   },
 
   // ── Other important tags ──────────────────────────────────────────────────
