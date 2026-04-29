@@ -53,8 +53,7 @@ export default function JsonLd() {
           numberOfBathroomsTotal: 2,
           occupancy: {
             "@type": "QuantitativeValue",
-            minValue: 1,
-            maxValue: 8,
+            value: 8,
             unitText: "guests",
           },
           petsAllowed: false,
