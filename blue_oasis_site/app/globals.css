@@ -8,7 +8,7 @@
   --text-primary: #f2f2f0;
   --text-muted: #a0a1a5;
   --text-dim: #606065;
-  --accent: #c8b89a;
+  --accent: #a6d7dd;
   --accent-light: #e8dcc8;
   --border: rgba(255, 255, 255, 0.08);
   --border-subtle: rgba(255, 255, 255, 0.04);
@@ -48,7 +48,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-dim);
+  background: var(--text-primary);
   border-radius: 2px;
 }
 
@@ -198,7 +198,7 @@ body {
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-primary);
 }
 
 /* Divider */

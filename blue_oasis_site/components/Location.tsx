@@ -24,8 +24,8 @@ export default function Location() {
 
             <RevealWrapper delay={100}>
               <p className="text-[#a0a1a5] font-light text-base md:text-lg leading-relaxed mb-8">
-                Nestled in Miami Beach, Blue Oasis 5512 puts you steps from the
-                ocean, world-class dining, nightlife, and cultural attractions —
+                Nestled in Bradenton Florida, Blue Oasis 5512 puts you steps from the
+                ocean, world-class dining, nightlife, and cultural attractions -
                 while remaining your serene private retreat.
               </p>
             </RevealWrapper>
@@ -34,17 +34,16 @@ export default function Location() {
             <RevealWrapper delay={180}>
               <div className="space-y-0 border border-white/[0.06] mb-10">
                 {[
-                  { place: "Miami Beach", distance: "0.5 mi to the ocean" },
-                  { place: "South Beach", distance: "1.2 mi" },
-                  { place: "Lincoln Road", distance: "0.8 mi" },
-                  { place: "Miami Int'l Airport", distance: "12 mi" },
+                  { place: "Bradenton Beach", distance: "0.5 mi to the ocean" },
+                  { place: "Cooper Beach", distance: "1.2 mi" },
+                  { place: "Bradenton Town", distance: "0.8 mi" },
+                  { place: "Bradenton Airport", distance: "12 mi" },
                   { place: "Wynwood Arts", distance: "5 mi" },
                 ].map((item, i, arr) => (
                   <div
                     key={item.place}
-                    className={`flex items-center justify-between p-5 ${
-                      i < arr.length - 1 ? "border-b border-white/[0.06]" : ""
-                    }`}
+                    className={`flex items-center justify-between p-5 ${i < arr.length - 1 ? "border-b border-white/[0.06]" : ""
+                      }`}
                   >
                     <div className="flex items-center gap-3">
                       <MapPin
@@ -64,7 +63,7 @@ export default function Location() {
 
             <RevealWrapper delay={250}>
               <a
-                href="https://maps.google.com/?q=Miami+Beach+FL"
+                href="https://www.google.com/maps/place/5512+21st+St+Ct+W,+Bradenton,+FL+34207/@27.4425216,-82.588094,17z/data=!3m1!4b1!4m6!3m5!1s0x88c315e08340b727:0x82a8cc5e36f7bcac!8m2!3d27.4425169!4d-82.5832231!16s%2Fg%2F11sttgj_yz?entry=ttu&g_ep=EgoyMDI2MDQyNi4wIKXMDSoASAFQAw%3D%3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline inline-flex"
@@ -80,11 +79,13 @@ export default function Location() {
             <div className="relative w-full aspect-square bg-[#181819] border border-white/[0.06] overflow-hidden">
               <iframe
                 title="Blue Oasis 5512 location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56079.59714756898!2d-80.18990485!3d25.7906856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b3a43c8fcb73%3A0xe84a2c80a05e8da8!2sMiami%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000"
-                className="w-full h-full grayscale opacity-70"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.858457279932!2d-82.5880940182068!3d27.44252157612322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c315e08340b727%3A0x82a8cc5e36f7bcac!2s5512%2021st%20St%20Ct%20W%2C%20Bradenton%2C%20FL%2034207!5e0!3m2!1sen!2sus!4v1777434196745!5m2!1sen!2sus"
+                className="w-full h-full opacity-70"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
+
+
             </div>
           </RevealWrapper>
         </div>

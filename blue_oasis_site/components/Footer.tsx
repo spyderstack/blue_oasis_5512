@@ -30,11 +30,13 @@ export default function Footer() {
                 { label: "Gallery", href: "#gallery" },
                 { label: "Amenities", href: "#amenities" },
                 { label: "Location", href: "#location" },
-                { label: "Book Direct", href: "#book" },
+                { label: "Book Direct", href: "https://rent.fairly.com/listing/13860451", external: true },
               ].map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
+                  target={"external" in link && link.external ? "_blank" : undefined}
+                  rel={"external" in link && link.external ? "noopener noreferrer" : undefined}
                   className="text-[#a0a1a5] text-sm font-light hover:text-[#f2f2f0] transition-colors"
                 >
                   {link.label}

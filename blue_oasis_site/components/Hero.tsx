@@ -50,11 +50,10 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-end pb-20 px-6 md:px-16 max-w-[1400px] mx-auto">
         <div
-          className={`transition-all duration-1000 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`transition-all duration-1000 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
-          <p className="label text-[#a0a1a5] mb-4">Miami Beach, FL</p>
+          <p className="font-light label text-[#a0a1a5] mb-4">Bradenton, FL</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-[#f2f2f0] leading-none mb-6">
             your private
             <br />
@@ -65,7 +64,12 @@ export default function Hero() {
             comfort. No crowds. Just you, and the life you deserve.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="#book" className="btn-solid">
+            <a
+              href="https://rent.fairly.com/listing/13860451"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-solid"
+            >
               Book Direct
               <ArrowRight size={16} weight="bold" />
             </a>
@@ -82,21 +86,17 @@ export default function Hero() {
               key={i}
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => setActive(i)}
-              className={`h-[2px] transition-all duration-300 ${
-                i === active
-                  ? "w-8 bg-[#f2f2f0]"
-                  : "w-4 bg-[#f2f2f0]/30 hover:bg-[#f2f2f0]/50"
-              }`}
+              className={`h-[2px] transition-all duration-300 ${i === active
+                ? "w-8 bg-[#f2f2f0]"
+                : "w-4 bg-[#f2f2f0]/30 hover:bg-[#f2f2f0]/50"
+                }`}
             />
           ))}
         </div>
       </div>
 
-      {/* Scroll prompt */}
-      <div className="absolute bottom-8 left-6 md:left-16 z-10 flex items-center gap-2 opacity-40">
-        <div className="w-px h-8 bg-[#f2f2f0] animate-pulse" />
-        <span className="label text-[#f2f2f0]">scroll</span>
-      </div>
+
+
     </section>
   );
 }

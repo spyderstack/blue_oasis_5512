@@ -84,7 +84,9 @@ export default function Nav() {
           {/* CTA + hamburger */}
           <div className="flex items-center gap-4">
             <a
-              href="#book"
+              href="https://rent.fairly.com/listing/13860451"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`hidden md:inline-flex btn-outline text-xs ${atBottom
                 ? "border-black/30 text-[#111112] hover:bg-black/5"
                 : ""
@@ -120,7 +122,9 @@ export default function Nav() {
             ))}
           </div>
           <a
-            href="#book"
+            href="https://rent.fairly.com/listing/13860451"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="btn-solid w-full justify-center"
           >

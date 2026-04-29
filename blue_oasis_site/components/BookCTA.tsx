@@ -13,10 +13,10 @@ export default function BookCTA() {
           src="/images/IMG_9224.JPG"
           alt="Blue Oasis 5512 book direct"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-80"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#111112]/80" />
+        <div className="absolute inset-0 bg-[#111112]/60" />
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-16">
@@ -113,14 +113,16 @@ export default function BookCTA() {
                 />
               </div>
 
-              <button
-                type="submit"
+              <a
+                href="https://rent.fairly.com/listing/13860451"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-solid w-full justify-center"
               >
                 <Calendar size={16} weight="light" />
-                Request Booking
+                Request Booking on Fairly
                 <ArrowRight size={14} weight="bold" />
-              </button>
+              </a>
             </form>
           </RevealWrapper>
         </div>

@@ -36,7 +36,7 @@ export default function TheSpace() {
 
             <RevealWrapper delay={250}>
               <p className="text-[#a0a1a5] font-light text-base md:text-lg leading-relaxed mb-10">
-                With 4 bedrooms, a private pool, and resort-style amenities,
+                With 3 bedrooms, 2 a private pool, and resort-style amenities,
                 Blue Oasis offers an escape from the ordinary — without leaving
                 the city behind.
               </p>
@@ -52,9 +52,8 @@ export default function TheSpace() {
                 ].map((stat, i) => (
                   <div
                     key={stat.label}
-                    className={`p-6 flex flex-col ${
-                      i < 2 ? "border-r border-white/[0.06]" : ""
-                    }`}
+                    className={`p-6 flex flex-col ${i < 2 ? "border-r border-white/[0.06]" : ""
+                      }`}
                   >
                     <span className="text-3xl md:text-4xl font-light text-[#f2f2f0] mb-1">
                       {stat.value}
@@ -66,7 +65,12 @@ export default function TheSpace() {
             </RevealWrapper>
 
             <RevealWrapper delay={400}>
-              <a href="#book" className="btn-outline">
+              <a
+                href="https://rent.fairly.com/listing/13860451"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
                 Book Your Stay
                 <ArrowRight size={14} weight="bold" />
               </a>
