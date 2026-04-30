@@ -169,6 +169,7 @@ export default function JsonLd() {
         "@id": "https://blueoasis5512.vercel.app/#website",
         url: "https://blueoasis5512.vercel.app",
         name: "Blue Oasis 5512",
+        alternateName: "Blue Oasis Retreat 5512",
         description:
           "Official website for Blue Oasis 5512 — a private luxury vacation rental in Bradenton, FL.",
         inLanguage: "en-US",

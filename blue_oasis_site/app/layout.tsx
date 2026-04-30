@@ -8,6 +8,7 @@ const OG_IMAGE = `${SITE_URL}/images/main.webp`;
 export const metadata: Metadata = {
   // ── metadataBase is required for resolving absolute OG image URLs ─────────
   metadataBase: new URL(SITE_URL),
+  applicationName: "Blue Oasis 5512",
 
   // ── Title template ────────────────────────────────────────────────────────
   // The primary title leads with the exact brand name Google must index.
