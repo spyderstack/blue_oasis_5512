@@ -5,9 +5,9 @@ import Image from "next/image";
 import { ArrowRight } from "@phosphor-icons/react";
 
 const slides = [
+  { src: "/images/IMG_9204.JPG", alt: "Blue Oasis outdoor space" },
   { src: "/images/IMG_9193.JPG", alt: "Blue Oasis living area" },
   { src: "/images/IMG_9200.JPG", alt: "Blue Oasis bedroom" },
-  { src: "/images/IMG_9204.JPG", alt: "Blue Oasis outdoor space" },
   { src: "/images/IMG_9228.JPG", alt: "Blue Oasis interior detail" },
 ];
 
